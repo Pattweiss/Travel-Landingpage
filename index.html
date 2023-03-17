@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marbella</title>
+
+    <style>
+      body {
+        background-color: #6995c0;
+      }
+      h1 {
+        text-align: center;
+        font-family: monospace;
+      }
+      h2 {
+        text-align: center;
+        font-family: monospace;
+      }
+      img {
+        max-width: 100%;
+      }
+      footer {
+        font-size: 9px;
+        font-family: monospace;
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      p {
+        font-family: monospace;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      a {
+        text-decoration: none;
+      }
+      .container {
+        max-width: 600px;
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+      }
+
+      .cuentaConmigo {
+        font-family: monospace;
+
+        border-radius: 6px;
+        display: block;
+        margin: 0 auto;
+        border: 1px solid #6995c0;
+
+        padding: 10px 15px;
+        background: white;
+        font-size: 20px;
+        transition: all 150ms ease-in-out;
+      }
+      .cuentaConmigo:hover {
+        background: #6995c0;
+        color: white;
+        border-color: white;
+        cursor: pointer;
+      }
+      .themeButton {
+        font-family: monospace;
+        border-radius: 6px;
+        font-size: 10px;
+        background: #202d3a;
+        color: white;
+        padding: 5px 8px;
+      }
+      .themeButton:hover {
+        color: #202d3a;
+        background: #6995c0;
+      }
+      .primera {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .primera:hover {
+        opacity: 0.7;
+        transform: scale(1.2);
+      }
+      .gallery-image {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
+      .gallery-image img {
+        max-width: 100%;
+        border-radius: 8px;
+        aspect-ratio: 2/1;
+        transition: all 150ms ease-in-out;
+      }
+      .gallery-image img:hover {
+        transform: scale(1.1);
+      }
+      .dark {
+        background: #202d3a;
+        color: antiquewhite;
+      }
+      .dark .cuentaConmigo {
+        background-color: #202d3a;
+      }
+      .dark .cuentaConmigo:hover {
+        background-color: #6995c0;
+      }
+      .dark .themeButton {
+        background-color: #6995c0;
+      }
+      .dark .themeButton:hover {
+        background-color: antiquewhite;
+        color: #202d3a;
+      }
+    </style>
+  </head>
+  <body class="">
+    <button class="themeButton">Change Theme</button>
+    <div class="container">
+      <h1>💙Marbella💙</h1>
+
+      <h2>El ultimativo finde de chicas para desdedir la soltería de Alex</h2>
+
+      <a href="https://es.wikipedia.org/wiki/Marbella">
+        <img
+          class="primera"
+          src="https://img.welt.de/img/reise/mobile241357021/6690249277-ci3x2l-w1600/Luxury-yacht-harbor-Puerto-Banus-Marbella-Andalusia-Spain.jpg"
+          alt="Marbella-image"
+      /></a>
+
+      <div class="gallery-image">
+        <img
+          class="segunda"
+          src="https://www.22places.de/images/2022/03/altstadt-marbella.jpg"
+          alt="Marbella-image"
+        />
+        <img
+          class="tercera"
+          src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/346000/346165-Marbella-Old-Town.jpg"
+          alt="Marbella-image"
+        />
+        <img
+          class="cuarta"
+          src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/346000/346081-Marbella-Seafront-Promenade.jpg"
+          alt="Marbella-image"
+        />
+        <img
+          class="quinta"
+          src="https://s3-eu-west-1.amazonaws.com/jet2blog/production/AGP_Marbella_Harbour_177303154_Getty_RGB-136-DPI-For-Web.jpg?mtime=20200603114535&focal=none"
+          alt="Marbella-image"
+        />
+      </div>
+      <p>
+        Marbella es una ciudad y un balneario de la Costa del Sol, en el sur de
+        España, que pertenece a la región de Andalucía. Las montañas de la
+        Sierra Blanca son el telón de fondo de los 27 km de playas de arena en
+        el Mediterráneo, villas, hoteles y campos de golf. Al oeste de la ciudad
+        de Marbella, la Milla Dorada de prestigiosos clubes nocturnos y
+        haciendas costeras llega al puerto deportivo Banús, lleno de yates
+        lujosos y rodeado de tiendas de moda elegantes y bares.
+      </p>
+      <a
+        href="https://www.amarehotels.com/es/blog/escapada-fin-de-semana-marbella/"
+        target="_blank"
+      >
+        <button class="cuentaConmigo">cuenta conmigo!</button></a
+      >
+    </div>
+
+    <footer>Designed and coded with 💙 by Patricia Weiss</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        //body.classList.toggle("dark");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".themeButton");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
